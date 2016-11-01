@@ -1,0 +1,11 @@
+---
+
+- src: https://github.com/darkedges/ansible-packer
+  name: ldx.ansible-packer
+- src: https://github.com/jlund/ansible-go
+  name: jlund.ansible-go
+- src: https://github.com/darkedges/ansible-jq
+  name: kbrebanov.ansible-jq
+- src: https://github.com/darkedges/ansible-oracle-java
+  name: williamyeh.oracle-java
+- name: jgoodall.maven3

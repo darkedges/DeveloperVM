@@ -1,0 +1,6 @@
+- name: ensure 'PasswordAuthentication yes' is present in '/etc/ssh/sshd_config'
+  lineinfile: dest=/etc/ssh/sshd_config
+              regexp='^PasswordAuthentication'
+              line='PasswordAuthentication yes'
+              state=present
+  notify: restartSSH

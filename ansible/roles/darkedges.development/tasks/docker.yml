@@ -1,0 +1,39 @@
+---
+
+- debug: msg="Installing Docker"
+
+# This is a bad idea as it is a security threat
+# docker run -ti --privileged -v /:/host fedora chroot /host
+- name: create 'docker' group
+  group: name=docker 
+         state=present
+
+- name: Adding user 'vagrant'  
+  user: name=vagrant
+        groups=docker
+        append=yes
+
+- name: update yum
+  package: name=*
+           state=latest
+
+- name: install docker.repo
+  copy: src=docker.repo 
+        dest=/etc/yum.repos.d/docker.repo
+
+- name: install 'docker-engine'
+  package: name=docker-engine
+           state=present
+
+- name: start 'docker' service
+  service: name=docker
+           state=started
+           enabled=yes
+
+- name: install latest version
+  pip: name=backports.ssl_match_hostname
+       state=latest
+
+- name: install 'docker-compose'
+  pip: name=docker-compose
+       state=present

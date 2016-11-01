@@ -1,0 +1,19 @@
+---
+
+- debug: msg="Development install"
+
+- name: install pre-requistes
+  package: name="{{ item }}"
+           state=present
+  with_items:
+   - gcc
+   - python-devel
+   - openssl-devel
+   - libselinux-python
+   - python-setuptools
+   - "@Development tools"
+
+- include: ansible.yml
+- include: rngd.yml
+- include: sshd.yml
+- include: docker.yml

@@ -1,0 +1,18 @@
+---
+- debug: msg="Development install"
+
+- name: Install 'rng-tools'
+  yum: name=rng-tools 
+       state=present
+
+- name: Modify '/etc/sysconfig/rngd' to point to '/dev/urandom''
+  template: src=etc/sysconfig/rngd.j2 
+            dest=/etc/sysconfig/rngd 
+            owner=root 
+            group=root 
+            mode=0640
+
+- name: Start the 'rngd'' service
+  service: name=rngd 
+           enabled=yes 
+           state=restarted
