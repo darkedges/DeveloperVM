@@ -1,6 +1,13 @@
 # Development VM
 
-Creates an initial Common Development Environment
+Creates an initial Common Development Environment and install the following in a Centos 7 Virtual Machine.
+
+* Ansible
+* Packer
+* Docker
+* Gradle / Ant via SDKMan
+* nvm and nodejs
+* Android SDK
 
 ## Pre-Requisites
 
