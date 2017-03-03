@@ -14,6 +14,7 @@
    - "@Development tools"
 
 - include: ansible.yml
-- include: rngd.yml
+  when: "install_ansible"
 - include: sshd.yml
 - include: docker.yml
+  when: "install_docker"

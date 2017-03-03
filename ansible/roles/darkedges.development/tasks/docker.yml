@@ -8,7 +8,7 @@
   group: name=docker 
          state=present
 
-- name: Adding user 'vagrant'  
+- name: Updating user 'vagrant'  
   user: name=vagrant
         groups=docker
         append=yes

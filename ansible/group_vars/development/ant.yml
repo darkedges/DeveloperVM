@@ -1,0 +1,4 @@
+---
+
+install_ant: yes
+ant_version: 1.10.0

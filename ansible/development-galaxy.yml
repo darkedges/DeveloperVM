@@ -9,3 +9,9 @@
 - src: https://github.com/darkedges/ansible-oracle-java
   name: williamyeh.oracle-java
 - name: jgoodall.maven3
+- src: https://github.com/darkedges/ansible-commons
+  name: darkedges.commonos
+- src: https://github.com/darkedges/ansible-nvm-centos
+  name: jvina.nvm
+- src: https://github.com/nickpack/ansible-role-android-sdk.git 
+  name:  nickpack.android-sdk

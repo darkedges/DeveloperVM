@@ -1,0 +1,8 @@
+---
+
+install_nvm: yes
+
+nodejs:
+  version: v4.6.0
+nvm:
+  version: v0.33.1

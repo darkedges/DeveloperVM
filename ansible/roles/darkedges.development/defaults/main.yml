@@ -1,0 +1,9 @@
+---
+
+install_maven: no
+install_ant: no
+install_nvm: no
+install_docker: no
+install_ansible: no
+install_jq: no
+install_packer: no

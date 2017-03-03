@@ -1,0 +1,16 @@
+---
+
+dependencies:
+  - role: ldx.ansible-packer
+    when: "install_packer"
+  - role: kbrebanov.ansible-jq
+    when: "install_jq"
+  - role: williamyeh.oracle-java
+    when: "install_maven or install_ant"
+  - role: jgoodall.maven3
+    when: "install_maven"
+  - role: darkedges.sdkman
+  - role: jvina.nvm
+    when: "install_nvm"
+  - role: nickpack.android-sdk
+    when: "install_androidsdk"

@@ -3,10 +3,5 @@
 - hosts: all
   become: yes
   roles:
-    #- darkedges.development
-    #- ldx.ansible-packer
-    #- jlund.ansible-go
-    #- kbrebanov.ansible-jq
-    #- williamyeh.oracle-java
-    #- jgoodall.maven3
-    - darkedges.sdkman
+    - role: darkedges.commonos
+    - role: darkedges.development

@@ -20,6 +20,11 @@
   sudo: no
 
 - name: Installing gradle
-  # This will read your bash profile file, which would setup sdkman-init.sh.
-  command: bash -lc "sdk install gradle {{gradle_version}}"
+  command: bash -lc "sdk install gradle {{ gradle_version }}"
   sudo: no
+  when: install_gradle
+
+- name: Installing ant
+  command: bash -lc "sdk install ant {{ ant_version }}"
+  sudo: no
+  when: install_ant
